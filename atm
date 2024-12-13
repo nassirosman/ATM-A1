@@ -1,0 +1,61 @@
+print("Welcome To MazeBank") 
+
+Trials = 3 
+
+UserPin = 1234 
+
+ 
+
+while Trials != 0: 
+
+    Pin = int(input("Please Enter Your 4-digit Pin Number: ")) 
+
+    if Pin != UserPin: 
+
+        Trials -= 1 
+
+        print("Wrong Pin Number, You Have", Trials, "Trials Left") 
+
+        if Trials == 0: 
+
+            print("Your Account Has Been Locked Due To Multiple Incorrect Attempts") 
+
+    else: 
+
+        while True: 
+
+            UserChoice = input("d: Deposit or w: Withdraw: ").lower() 
+
+            if UserChoice == "d": 
+
+                UserDeposit = input("Enter The Amount You Would Like to Deposit: ") 
+
+                print(UserDeposit, "$ Have Been Deposited Into Your Account") 
+
+            elif UserChoice == "w": 
+
+                UserWithdraw = input("Enter The Amount You Would Like to Withdraw: ") 
+
+                print(UserWithdraw, "$ Have Been Withdrawn From Your Account") 
+
+            else: 
+
+                print("Invalid Choice. Please Choose 'd' or 'w'.") 
+
+                continue 
+
+ 
+
+            UserExit = input("Would You Like To Continue? Y/N: ").upper() 
+
+            if UserExit == "N": 
+
+                print("Thank You For Using MazeBank") 
+
+                break 
+
+        break 
+
+ 
+
+ 
